@@ -1,0 +1,56 @@
+<?php
+require_once 'library.php';
+if(chkLogin()){
+    header("Location: home.php");
+}
+?>
+
+<html>
+    <title>
+        NUOVA BANCA RISORGIMARCHE 
+    </title>
+    <head>
+<h1> <p align="center"> <img src="logo.jpg" alt="Mountain View" style="width:304px;height:228px;">    
+   <br>
+    <font size = "7"> Benvenuto nella Banca </font> </p> </h1>
+</head>
+<body>
+    
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <h1> <p align="right"> <font size="5"> AVVISI E COMUNICAZIONI </font> 
+            <font size="3">
+            <br> 1) Viaggi molto in Autostrada? Telepass gratuito per 6 mesi. 
+            Per maggiori informazioni chiedi alla tuia filiale. 
+            <br> 2) Sta per arrivare SMS ALLERT, riceverai sul tuo cellulare un sms ogni volta che fai un prelievo dal bancomat. E' completamente gratuito. 
+            <br> 3) Si possono aprire nuovi conto correnti con costi gratuiti per i ragazzi minorenni fino all'età di 23 anni. 
+            Chiedere in filiale per maggiori informazioni. 
+
+            </font>
+        </p> </h1> 
+      
+        <p align="left">
+
+            <div class="container">
+                <form class="form-horizontal" method="post" action="login_action.php">
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail3" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputPassword3">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword3" name="pass" placeholder="Password" required>
+                    </div>
+                    <button type="submit" name="login" class="btn btn-default">Sign in
+                        <a href ="myaccount.html"> </a>
+                    </button>
+                </form>
+            </div>
+    Password sbagliata? Invia un e-mail a: 
+    <a href="mailto:info@bancarisorgimarche.com"> info@bancarisorgimarche.it </a>
+        </body>
+        </html>
